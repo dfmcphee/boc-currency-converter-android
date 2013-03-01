@@ -5,14 +5,16 @@
     tools:context=".MainActivity" >    
     
     	 <Button
-             android:id="@+id/selectConvertFrom"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_alignLeft="@+id/fromAmountLabel"
-             android:layout_alignRight="@+id/fromInput"
-             android:layout_below="@+id/fromSelectLabel"
-             android:focusable="false"
-             android:text="Canadian Dollar" />
+    	     android:id="@+id/selectConvertFrom"
+    	     android:layout_width="wrap_content"
+    	     android:layout_height="wrap_content"
+    	     android:layout_alignLeft="@+id/fromSelectLabel"
+    	     android:layout_alignRight="@+id/fromInput"
+    	     android:layout_below="@+id/fromSelectLabel"
+    	     android:background="@drawable/custom_button"
+    	     android:focusable="false"
+    	     android:text="Canadian Dollar"
+    	     android:textColor="@color/amostWhite" />
     	
     	 <TextView
              android:id="@+id/fromAmountLabel"
@@ -21,6 +23,7 @@
              android:layout_alignLeft="@+id/fromInput"
              android:layout_below="@+id/selectConvertFrom"
              android:layout_marginTop="14dp"
+             android:layout_marginBottom="10dp"
              android:focusable="false"
              android:focusableInTouchMode="false"
              android:inputType="none"
@@ -33,6 +36,11 @@
              android:layout_below="@+id/fromAmountLabel"
              android:layout_centerHorizontal="true"
              android:ems="10"
+             android:textSize="42sp"
+             android:gravity="center"
+             android:layout_marginRight="15dip"
+             android:layout_marginLeft="15dip"
+             android:background="@drawable/custom_edittext"
              android:inputType="numberDecimal" />
                   
          <Button
@@ -42,9 +50,11 @@
              android:layout_alignLeft="@+id/amountTextLabel"
              android:layout_alignRight="@+id/answer"
              android:layout_below="@+id/toTextLabel"
+             android:background="@drawable/custom_button"
              android:focusable="false"
              android:focusableInTouchMode="false"
-             android:text="U.S. dollar" />
+             android:text="U.S. dollar"
+             android:textColor="@color/amostWhite" />
 
          <TextView
              android:id="@+id/amountTextLabel"
@@ -53,6 +63,7 @@
              android:layout_alignLeft="@+id/fromInput"
              android:layout_below="@+id/selectConvertTo"
              android:layout_marginTop="15dp"
+             android:layout_marginBottom="10dp"
              android:focusable="false"
              android:focusableInTouchMode="false"
              android:inputType="none"
@@ -62,36 +73,17 @@
              android:id="@+id/answer"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:layout_alignLeft="@+id/amountTextLabel"
              android:layout_below="@+id/amountTextLabel"
              android:ems="10"
              android:enabled="true"
              android:focusable="false"
              android:focusableInTouchMode="false"
-             android:inputType="numberDecimal" />
-
-         <TextView
-             android:id="@+id/fromSelectLabel"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_alignLeft="@+id/selectConvertFrom"
-             android:layout_alignParentTop="true"
-             android:layout_marginTop="36dp"
-             android:focusable="false"
-             android:focusableInTouchMode="false"
-             android:inputType="none"
-             android:text="FROM:" />
-
-         <ImageButton
-             android:id="@+id/swapButton"
-             style="?android:attr/buttonStyleSmall"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_centerHorizontal="true"
-             android:layout_centerVertical="true"
-             android:background="@null"
-             android:src="@drawable/swap_button"
-             android:text=" " />
+             android:gravity="center"
+             android:layout_marginLeft="15dp"
+             android:layout_marginRight="15dp"
+             android:inputType="numberDecimal"
+             android:background="@drawable/custom_edittext"
+             android:textSize="42sp" />
 
          <TextView
              android:id="@+id/toTextLabel"
@@ -99,10 +91,54 @@
              android:layout_height="wrap_content"
              android:layout_alignLeft="@+id/selectConvertTo"
              android:layout_below="@+id/swapButton"
-             android:layout_marginTop="15dp"
+             android:focusable="false"
+             android:focusableInTouchMode="false"
+             android:layout_marginBottom="10dp"
+             android:inputType="none"
+             android:text="TO:" />
+
+         <ImageButton
+             android:id="@+id/swapButton"
+             style="?android:attr/buttonStyleSmall"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/fromInput"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="14dp"
+             android:background="@null"
+             android:src="@drawable/swap_button"
+             android:text=" " />
+
+         <TextView
+             android:id="@+id/fromSelectLabel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/fromAmountLabel"
+             android:layout_alignParentTop="true"
+             android:layout_marginTop="14dp"
+             android:layout_marginBottom="10dp"
              android:focusable="false"
              android:focusableInTouchMode="false"
              android:inputType="none"
-             android:text="TO:" />
+             android:text="FROM:" />
+
+         <ImageView
+             android:id="@+id/fromImage"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_alignRight="@+id/fromAmountLabel"
+             android:layout_alignTop="@+id/selectConvertFrom"
+             android:layout_marginRight="15dp"
+             android:layout_marginTop="3dp"
+             android:src="@drawable/cad_flag" />
+
+         <ImageView
+             android:id="@+id/toImage"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_alignLeft="@+id/fromImage"
+             android:layout_alignTop="@+id/selectConvertTo"
+             android:layout_marginTop="3dp"
+             android:src="@drawable/usd_flag" />
          
 </RelativeLayout>

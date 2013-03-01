@@ -1,0 +1,7 @@
+
+    <resources>
+        <color name="almostBlack">#2b2b32</color>
+        <color name="lighterAlmostBlack">#2b2b2b</color>
+        <color name="white">#fff</color>
+        <color name="amostWhite">#eee</color>
+    </resources>
